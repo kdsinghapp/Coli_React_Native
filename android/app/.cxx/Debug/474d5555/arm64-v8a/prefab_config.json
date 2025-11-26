@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "prefabPath": "/Users/technorizen/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar",
+  "packages": [
+    "/Users/technorizen/.gradle/caches/8.12/transforms/3bc63a8b158a542d836b9d9b783cf743/transformed/react-android-0.78.0-debug/prefab",
+    "/Users/technorizen/Desktop/aman/september-2025/DainaApp/node_modules/react-native-reanimated/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/technorizen/Desktop/aman/september-2025/DainaApp/node_modules/react-native-worklets-core/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/technorizen/.gradle/caches/8.12/transforms/1d0fb219786db76b2dae699cb7a75021/transformed/hermes-android-0.78.0-debug/prefab",
+    "/Users/technorizen/.gradle/caches/8.12/transforms/e3431698402b1b46ca4907c12c46a565/transformed/fbjni-0.7.0/prefab"
+  ]
+}
