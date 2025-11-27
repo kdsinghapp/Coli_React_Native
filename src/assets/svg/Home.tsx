@@ -9,7 +9,7 @@ const Home = (props) => (
     {...props}
   >
     <Path
-      stroke="##EF571F"
+      stroke="#2F4858"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

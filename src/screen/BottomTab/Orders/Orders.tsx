@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
   },
   tabActive: { backgroundColor: "#EF571F" },
   tabText: { fontSize: 14,fontWeight:"500" , color: MUTED },
-  tabTextActive: { color: "#000",fontSize: 14,fontWeight:"500" , },
+  tabTextActive: { color: "white",fontSize: 15,fontWeight:"500" , },
 
   card: {
     backgroundColor: CARD,

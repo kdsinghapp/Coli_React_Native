@@ -110,132 +110,7 @@ const ProfileScreen: React.FC<Props> = ({
     <SafeAreaView style={styles.safe}>
       <StatusBarComponent/>
        {/* <LoadingModal visible ={isLoading}/> */}
-      <ScrollView 
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={styles.container}>
-        {/* Header */}
-        <Text style={styles.title}>Profile</Text>
-        <View style={styles.profileCard}>
-          <View style={styles.avatarWrap}>
-            {isLogin?.image ? (
-              <Image source={{ uri: isLogin?.image }} style={styles.avatar} />
-            ) : (
-                            <Image source={{ uri: user.avatarUrl }} style={styles.avatar} />
-            )}
-            <TouchableHighlight style={styles.statusDot}
-            
-             onPress={()=>{
-              navigation.navigate(ScreenNameEnum.EditProfile)
-           }}
-            >
-              <Image source={imageIndex.eoditphots} style={{
-                height:22,
-                width:22
-              }}/>
-              {/* <Feather name="camera" size={12} color="#fff" /> */}
-            </TouchableHighlight>
-          </View>
-
-          <View style={{ flex: 1 }}>
-            <Text style={[styles.name,{
-              color:"#FFCC00",
-              fontFamily:font.MonolithRegular
-
-            }]}>{isLogin?.firstName}</Text>
-            <Text style={[styles.email,{
-              color:"#9DB2BF" ,
-              fontFamily:font.MonolithRegular
-            }]}>{isLogin?.email}</Text>
-          </View>
-        </View>
-
-        {/* Menu */}
-        <View style={styles.card}>
-          <ListItem
-            icon={<SvgIndex.Edit   />}
-            label="Edit Profile"
-            onPress={()=>{
-              navigation.navigate(ScreenNameEnum.EditProfile)
-           }}
-          />
-          <ItemDivider />
-          <ListItem
-            icon={<SvgIndex.Edit   />}
-            label="My Address"
-            onPress={()=>{
-              na.navigate(ScreenNameEnum.AddressScreen)
-           }}
-          />
-          <ItemDivider />
-          <ListItem
-            icon={<SvgIndex.Box  />}
-            label="My Orders"
-            onPress={()=>{
-              navigation.navigate(ScreenNameEnum.OrdersPrfile)
-           }}          />
-          <ItemDivider />
-          <ListItem
-            icon={<SvgIndex.Lockss  />}
-            label="Change Password"
-             onPress={()=>{
-              navigation.navigate(ScreenNameEnum.changePassword)
-           }}
-            
-            secure
-          />
-          <ItemDivider />
-          <ListItem
-            icon={<SvgIndex.Privacy />}
-            label="Privacy Policy"
-            onPress={()=>{
-               navigation.navigate(ScreenNameEnum.PrivacyPolicy)
-            }}
-          />
-          <ItemDivider />
-          <ListItem
-            icon={<SvgIndex.Terms   />}
-            label="Terms and Conditions"
-            onPress={()=>{
-              navigation.navigate(ScreenNameEnum.LegalPoliciesScreen)
-             }}          />
-        </View>
-<View style={{
-  marginTop:20
-}}>
-          <CustomButton
-            title={'Logout'}
-          onPress={()=>{
-            setModal(true)
-          }}
- 
-           />
-           </View>
-
-        {/* Logout */}
-        {/* <Pressable
-          onPress={()=>{
-            setModal(true)
-          }}
-          style={({ pressed }) => [
-            styles.logoutBtn,
-            { opacity: pressed ? 0.85 : 1 },
-          ]}
-          android_ripple={{ color: "#fff" }}
-        >
-          <Text style={styles.logoutText}>Logout</Text>
-        </Pressable> */}
-       <LogoutModal
-  visible={Modal}
-  onLogout={async () => {
-    setModal(false);
-handleLogout()
-    // ✅ Call logout function
-    
-  }}
-  onCancel={() => setModal(false)}
-/>
-
-      </ScrollView>
+      
     </SafeAreaView>
   );
 };
@@ -243,6 +118,7 @@ handleLogout()
 const ItemDivider = () => <View style={styles.divider} />;
 
 const styles = StyleSheet.create({
+  
   safe: { flex: 1, backgroundColor: "white" },
   container: { padding: 16, paddingBottom: 28 },
   title: { fontSize: 22, fontFamily:font.MonolithRegular, color: TEXT, marginBottom: 12 },
