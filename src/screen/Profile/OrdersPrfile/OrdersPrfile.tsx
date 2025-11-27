@@ -262,8 +262,7 @@ const styles = StyleSheet.create({
     backgroundColor: CARD,
     borderRadius: 16,
     padding: 14,
-    borderWidth: 1,
-    borderColor: BORDER,
+     borderColor: BORDER,
     shadowOpacity: 0.05,
     shadowRadius: 8,
     shadowColor: "#000",
@@ -274,8 +273,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 12,
   },
-  trackingLabel: { color: MUTED, fontFamily:font.MonolithRegular,  },
-  trackingId: { color: TEXT, fontFamily:font.MonolithRegular,  },
+  trackingLabel: { color: MUTED,  fontWeight:"500",  },
+  trackingId: { color: TEXT,fontWeight:"600",  },
 
   trackBase: {
     height: 24,
@@ -317,7 +316,7 @@ const styles = StyleSheet.create({
   },
   cityBlock: { flex: 1 },
   date: { color: MUTED, fontSize: 12, marginBottom: 4,fontFamily:font.MonolithRegular,  },
-  city: { color: TEXT, fontSize: 16, fontFamily:font.MonolithRegular,  },
+  city: { color: TEXT, fontSize: 15,fontWeight:"500",  },
 
   playButton: {
     width: 28,

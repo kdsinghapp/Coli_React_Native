@@ -9,14 +9,14 @@ const Box = (props) => (
     {...props}
   >
     <Path
-      stroke="#EF571F"
+      stroke="#005091"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
       d="m3.67 7.94 8.83 5.11 8.77-5.08M12.5 22.11v-9.07"
     />
     <Path
-      stroke="#EF571F"
+      stroke="#005091"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

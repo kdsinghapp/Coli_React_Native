@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 40,
+    borderRadius: 10,
     backgroundColor: '#F7F8F8',
     paddingHorizontal: 15,
     height: 60,

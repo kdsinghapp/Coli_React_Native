@@ -10,7 +10,7 @@ const Logout = (props) => (
   >
     <Circle cx={20} cy={20.486} r={20} fill="#EF571F" />
     <Path
-      stroke="#fff"
+      stroke="#005091"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}

@@ -8,6 +8,7 @@ enum ScreenNameEnum {
   ProfileScreen = "ProfileScreen",
   UploadDocumentsScreen="UploadDocumentsScreen",
   DeliveryHome="DeliveryHome",
+  ReceiverRole="ReceiverRole",
   AllOrder="AllOrder",
   RequestLoading="RequestLoading",
   DeliveryRequest="DeliveryRequest",

@@ -15,7 +15,7 @@ import font from '../../theme/font';
 const { width, height } = Dimensions.get('window');
 
 // Your theme color
-const THEME_COLOR = '#FFCC00';
+const THEME_COLOR = '#EF571F';
 
 const LoadingModal = ({ visible, message = "Loading..." }:any) => {
   // Animation values

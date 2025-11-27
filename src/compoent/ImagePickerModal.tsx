@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { color } from '../constant';
 import font from '../theme/font';
+import CustomButton from './CustomButton';
 
 interface ImagePickerModalProps {
   modalVisible: boolean;
@@ -56,11 +57,14 @@ const ImagePickerModal: React.FC<ImagePickerModalProps> = ({
             {/* Uncomment below if camera option needed */}
             {/* <OptionButton text="📸 Take a Photo" onPress={handleTakePhoto} /> */}
 
-            <TouchableOpacity style={styles.cancelButton} onPress={handleCancel}>
-              <Text allowFontScaling={false} style={styles.cancelText}>
-                Cancel
-              </Text>
-            </TouchableOpacity>
+             
+           
+          <CustomButton 
+            title={'Cancel'}
+          onPress={handleCancel}
+ 
+           />
+       
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -132,7 +136,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: color.primary,
     paddingVertical: 15,
-    borderRadius: 32,
+    borderRadius: 10,
     alignItems: 'center',
     marginTop: 10, 
     justifyContent:"center"

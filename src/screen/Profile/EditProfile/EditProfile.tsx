@@ -125,13 +125,13 @@ const getProfileApi = async () => {
                 placeholder="Email"
                 value={email}
                 onChangeText={setEmail}
-                leftIcon={<Image source={imageIndex.mess} style={styles.icon} />}
+                leftIcon={<Image source={imageIndex.Message1} style={styles.icon} />}
               />
               <CustomInput
-                placeholder="Address"
+                placeholder="789541263"
                 value={address}
                 onChangeText={setAddress}
-                leftIcon={<Image source={imageIndex.location1} style={styles.icon} />}
+                leftIcon={<Image source={imageIndex.userLogo} style={styles.icon} />}
               />
             </View>
           </View>
@@ -191,6 +191,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 18,
     height: 18,
+    resizeMode:"contain"
   },
   buttonContainer: {
     marginBottom: 30,

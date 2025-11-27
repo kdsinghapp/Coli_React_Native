@@ -35,6 +35,7 @@ import Login from "../screen/auth/login/Login";
 import SignUp from "../screen/auth/signUp/SignUp";
 import CreateNewPassword from "../screen/auth/login/createNewPassword/CreateNewPassword";
 import PasswordReset from "../screen/auth/passwordReset/PasswordReset";
+import ReceiverRole from "../screen/BottomTab/ReceiverRole/ReceiverRole";
   const _routes: any = {
   REGISTRATION_ROUTE: [
     {
@@ -65,6 +66,10 @@ import PasswordReset from "../screen/auth/passwordReset/PasswordReset";
     {
       name: ScreenNameEnum.WalletScreen,
       Component: WalletScreen,
+    },
+    {
+      name: ScreenNameEnum.ReceiverRole,
+      Component: ReceiverRole,
     },
    
     {

@@ -7,8 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import StatusBarComponent from '../../../compoent/StatusBarCompoent';
 import CustomHeader from '../../../compoent/CustomHeader';
 import imageIndex from '../../../assets/imageIndex';
-import { color } from '../../../constant';
-import CustomButton from '../../../compoent/CustomButton';
+ import CustomButton from '../../../compoent/CustomButton';
 import font from '../../../theme/font';
 import LoadingModal from '../../../utils/Loader';
  
@@ -152,12 +151,12 @@ const styles = StyleSheet.create({
         marginLeft: 5
     },
 
-    image: { tintColor: "#7B6F72", height: 18, width: 18 },
+    image: { tintColor: "#7B6F72", resizeMode:"contain", height: 18, width: 18 },
     inputContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        // backgroundColor: '#FFF5F3',
-        borderRadius: 30,
+     backgroundColor: '#F7F8F8',
+        borderRadius: 15,
         paddingHorizontal: 20,
         marginBottom: 15,
         height: 60,
@@ -169,9 +168,8 @@ const styles = StyleSheet.create({
         flex: 1,
         marginLeft: 10,
         color: "black",
-        fontSize:16 ,
-        fontFamily:font.MonolithRegular
-    },
+        fontSize:15 ,
+     },
 
 });
 

@@ -18,6 +18,7 @@ Calls: require('./images/Calls.png'),
 hide: require('./images/hide.png'),
 messtrcker: require('./images/messtrcker.png'),
 mess: require('./images/mess.png'),
+Message1: require('./images/Message1.png'),
 go: require('./images/go.png'),
 search1: require('./images/search1.png'),
 pin: require('./images/pin.png'),
@@ -75,6 +76,10 @@ BackLeft: require('./images/BackLeft.png'),
 OrderPlaced: require('./images/OrderPlaced.png'),
 userLogo: require('./images/userLogo.png'),
 deliver: require('./images/Deliver.png'),
+Agency: require('./images/Agency.png'),
+CounteActive: require('./images/CounteActive.png'),
+active: require('./images/active.png'),
+AgencyActive: require('./images/AgencyActive.png'),
 
 
 

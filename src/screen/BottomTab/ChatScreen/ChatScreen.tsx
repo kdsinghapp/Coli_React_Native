@@ -14,8 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import StatusBarComponent from "../../../compoent/StatusBarCompoent";
 import imageIndex from "../../../assets/imageIndex";
 import { useNavigation } from "@react-navigation/native";
-import ScreenNameEnum from "../../../routes/screenName.enum";
-import font from "../../../theme/font";
+ import font from "../../../theme/font";
  
 interface Message {
   id: string;
@@ -148,8 +147,8 @@ const styles = StyleSheet.create({
     borderBottomColor: "#eee",
   },
   avatar: { width: 40, height: 40, borderRadius: 20, marginRight: 10 },
-  name: {  fontFamily:font.MonolithRegular, fontSize: 16 },
-  status: { fontSize: 12, color: "green",fontFamily:font.MonolithRegular, },
+  name: {  fontWeight:"600", fontSize: 16 ,color:"#EF571F"},
+  status: { fontSize: 12, color: "green",fontWeight:"500",  },
   chatContainer: { padding: 10 },
   messageBubble: {
     maxWidth: "75%",
@@ -159,7 +158,7 @@ const styles = StyleSheet.create({
   },
   myMessage: {
     alignSelf: "flex-end",
-    backgroundColor: "#FFCC00",
+    backgroundColor: "#005091",
     borderBottomRightRadius: 0,
   },
   otherMessage: {
@@ -167,9 +166,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#F6F6F6",
     borderBottomLeftRadius: 0,
   },
-  myMessageText: { color: "white",fontFamily:font.MonolithRegular, fontSize:14 },
-  otherMessageText: { color: "#2C2D3A",fontFamily:font.MonolithRegular,fontSize:14 },
-  timeText: { fontSize: 10, fontFamily:font.MonolithRegular, marginTop: 5, textAlign: "right" },
+  myMessageText: { color: "white",fontWeight:"500", fontSize:14 },
+  otherMessageText: { color: "#2C2D3A",fontWeight:"500",fontSize:14 },
+  timeText: { fontSize: 10, fontFamily:font.MonolithRegular,color: "white", marginTop: 5, textAlign: "right" },
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",

@@ -6,17 +6,18 @@ const Lockss = (props) => (
     width={24}
     height={24}
     fill="none"
-    {...props}
+  
+     {...props}
   >
     <Path
-      stroke="#EF571F"
+      stroke="#005091"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
       d="M6 10V8c0-3.31 1-6 6-6s6 2.69 6 6v2M12 18.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
     />
     <Path
-      stroke="#EF571F"
+      stroke="#005091"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

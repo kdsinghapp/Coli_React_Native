@@ -35,6 +35,9 @@ export const styles = StyleSheet.create({
     color: '#76889A',
     textAlign: 'center',
      lineHeight:20,
+
+
+     
     fontFamily:font.MonolithRegular,
     marginHorizontal:15
 

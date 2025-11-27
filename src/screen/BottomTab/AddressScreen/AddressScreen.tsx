@@ -90,8 +90,7 @@ const styles = StyleSheet.create({
     padding: 14,
     marginVertical: 8,
     borderRadius: 12,
-     borderWidth: 1,
-    borderColor: "#eee",    shadowColor: "#000", // iOS shadow
+     borderColor: "#eee",    shadowColor: "#000", // iOS shadow
     shadowOpacity: 0.1,
     shadowRadius: 4,
     shadowOffset: { width: 0, height: 2 },
@@ -105,8 +104,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textContainer: { flex: 1, marginLeft: 15 },
-  title: { fontSize: 16, fontFamily:font.MonolithRegular, color: "#000" },
-  subtitle: {marginTop:2, fontSize: 13, fontFamily:font.MonolithRegular,color: "#777" },
+  title: { fontSize: 16, fontWeight:"700", color: "#000" },
+  subtitle: {marginTop:2, fontSize: 13,fontWeight:"400",color: "#6B7280" },
   editBtn: {
     padding: 6,
     borderRadius: 8,

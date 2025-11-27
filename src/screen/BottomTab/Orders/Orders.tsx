@@ -126,8 +126,7 @@ const nava = useNavigation()
 
         <FlatList
           contentContainerStyle={{ paddingBottom: 24 ,marginTop:11 }}
-          // data={orderData}
-                    data={[1]}
+           data={orderData}
 
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => <OrderCard order={item} />}

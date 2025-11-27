@@ -24,11 +24,14 @@ const getPrivacyPolicy = async () => {
   try {
     const response = await Privacypolicy(setLoading);
     if (response && response?.content) {
+        setLoading(false)
       setContent(response.content); // ✅ content is now set correctly
     } else {
+        setLoading(false)
       setContent('<p>No content available</p>');
     }
   } catch (error) {
+    setLoading(false)
     setContent('<p>No content available</p>');
   }
 };

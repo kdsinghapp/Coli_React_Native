@@ -177,6 +177,7 @@ const PickupFromLocation = () => {
   };
    
 const handleSubmit = async () => {
+  // navgatoon.navigate(ScreenNameEnum.ReceiverRole)
   // if (validateForm()) {
   //   console.log("Form submitted successfully!");
 

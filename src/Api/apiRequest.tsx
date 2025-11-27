@@ -311,17 +311,19 @@ const GetProfileApi = async (
     const textResponse = await response.text();
     const parsedResponse = JSON.parse(textResponse);
 
-    console.log("parsedResponse", parsedResponse);
-
+ 
     if (parsedResponse?.status === 1) {
+      setLoading(false)
       successToast(parsedResponse?.message);
       return parsedResponse; // ✅ Return the data
     } else {
+       setLoading(false)
       errorToast(parsedResponse?.message);
       return null; // Optional: return null on failure
     }
 
   } catch (error: any) {
+     setLoading(false)
     console.error('Privacy Policy error:', error);
     errorToast(error.message);
     return null;

@@ -137,6 +137,8 @@ const navagtaion = useNavigation()
 
       <FlatList
         data={[]} 
+                // data={SAMPLE_DATA} 
+
         style={{
           marginTop:15
         }}
@@ -256,14 +258,14 @@ const styles = StyleSheet.create({
 
   },
   unread: {
-    color: "#FFCC00",
+    color: "#EF571F",
     fontFamily:font.MonolithRegular ,
     fontSize:12
 
    },
   badge: {
-    backgroundColor: "#FFCC00",
-    borderRadius: 10,
+    backgroundColor: "#EF571F",
+    borderRadius: 20,
     paddingHorizontal: 6,
     paddingVertical: 2,
     minWidth: 20,
