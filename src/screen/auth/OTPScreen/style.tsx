@@ -7,7 +7,7 @@ import font from "../../../theme/font";
 export const styles = StyleSheet.create({
   container: {
     // backgroundColor: '#FFF',
-    padding: 15,
+    padding: 12,
     flex: 1,
   },
   safeArea: {
@@ -28,13 +28,14 @@ export const styles = StyleSheet.create({
     lineHeight: 36,
     color: 'rgba(0, 0, 0, 1)',
     marginTop: 10,
-    fontWeight:"500"
+    fontWeight:"700"
    },
    txtDes:{
         color:'#9DB2BF',
         fontSize:16,
-          fontFamily:font.MonolithRegular
-
+            fontWeight:"500" ,
+            marginTop:5
+ 
       },
   headerSection: {
     height: hp(15),

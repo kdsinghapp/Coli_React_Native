@@ -43,13 +43,13 @@ export default function OtpScreen() {
 
     >
                <StatusBarComponent />
-               <CustomHeader label={"Back"}/>
+               <CustomHeader label={""}/>
         <LoadingModal visible ={isLoading}/>
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.headerSection}>
-            <Text style={styles.txtHeading}>Enter the verification code</Text>
-            <Text style={styles.txtDes}>We sent you a 4-digit code to  {data?.code} {data?.mob}
+            <Text style={styles.txtHeading}>Check your SMS</Text>
+            <Text style={styles.txtDes}>Please put the 4 digits sent to you {data?.code} {data?.mob}
             </Text>
            </View>
 

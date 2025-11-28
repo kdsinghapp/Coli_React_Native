@@ -16,7 +16,7 @@ export default function TextInputField({ ...props }) {
   };
 
   return (
-    <View style={{ height: hp(7), justifyContent: 'center', marginVertical: 12 }}>
+    <View style={{ height: hp(7), justifyContent: 'center', marginVertical: 10 }}>
       <View
         style={[
           {

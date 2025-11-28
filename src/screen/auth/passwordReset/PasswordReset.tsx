@@ -77,7 +77,7 @@ export default function PasswordReset() {
                 width: "100%",
               }]}
             >
-              <Image source={imageIndex.mess} style={{ height: 55, width: 55 }} resizeMode='contain' />
+              <Image source={imageIndex.SMS} style={{ height: 77, width: 77 }} resizeMode='contain' />
               <View>
                 <Text style={{
                   fontSize: 15,
@@ -109,6 +109,17 @@ export default function PasswordReset() {
                         }}>{errors.email}</Text>
 
         </View>
+        <View style={{
+          justifyContent:"center" ,
+          alignItems:"center"
+        }}>
+        <Image source={imageIndex.bag11} 
+        style={{
+          height:333,
+          width:333
+        }}
+        />
+        </View>
       </ScrollView>
       <View style={{
         justifyContent: 'flex-start', marginBottom: 20
@@ -116,7 +127,7 @@ export default function PasswordReset() {
         marginHorizontal: 15
       }}>
         <CustomButton
-          title={'Submit'}
+          title={'Send'}
           // onPress={() => handleForgot()
 
 

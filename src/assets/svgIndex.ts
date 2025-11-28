@@ -1,4 +1,5 @@
  import Acttiv from "./svg/Acttiv";
+import Adesh from "./svg/Adesh";
 import Box from "./svg/Box";
 import Box1 from "./svg/Box1";
 import Earing from "./svg/Earing";
@@ -46,6 +47,7 @@ import Wallert from "./svg/Wallert";
      Earing ,
      Wallert ,
      Privacys ,
+     Adesh,
      Logout,
      Soupport
    };

@@ -136,8 +136,7 @@ const navagtaion = useNavigation()
       </View>
 
       <FlatList
-        data={[]} 
-                // data={SAMPLE_DATA} 
+                  data={SAMPLE_DATA} 
 
         style={{
           marginTop:15
@@ -173,7 +172,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 0,  // better alignment with TextInput
     marginBottom: 8,
-    height: 48,
+    height: 59,
     justifyContent: "center",
 
     // iOS shadow
@@ -182,8 +181,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
 
-     borderWidth: 1,
-    borderColor: "#eee",
+     borderColor: "#eee",
 
   },
   input: {

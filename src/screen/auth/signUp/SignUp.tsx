@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView,
  } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
  import StatusBarCompoent from '../../../compoent/StatusBarCompoent';
 import imageIndex from '../../../assets/imageIndex';
@@ -17,6 +17,7 @@ import ScreenNameEnum from '../../../routes/screenName.enum';
   import useSignup from './useSinup';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import TextInputField from '../../../compoent/TextInputField';
+import CustomHeader from '../../../compoent/CustomHeader';
 
 export default function SignUp() {
   const {
@@ -37,11 +38,13 @@ export default function SignUp() {
     handleCountryCodeSelect,
   } = useSignup();
 
- 
+   const [isSelected, setIsSelected] = useState(false);
+
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBarCompoent />
+      <CustomHeader label="Back" />
       {isLoading && <LoadingModal />}
       
       <ScrollView 
@@ -49,13 +52,7 @@ export default function SignUp() {
         contentContainerStyle={styles.scrollContent}
       >
         <View style={styles.content}>
-          {/* Header Section */}
-             <Image
-              source={imageIndex.appLogo}
-              style={styles.logo}
-              resizeMode="contain"
-            />
-      
+          
 
              <Text style={styles.title}>Sign Up</Text>
              <Text style={{
@@ -67,13 +64,34 @@ export default function SignUp() {
           {/* Form Section */}
           <View style={styles.formContainer}>
             {/* Full Name */}
+            <View style={{
+              flexDirection:"row",
+              justifyContent:"space-between" ,
+              width:"50%" ,
+              }}>
+                <View style={{
+                  margin:5
+                }}>
             <TextInputField
-              onChangeText={(value: string) => handleChange('fullName', value)}
-              placeholder="Full Name"
+              // onChangeText={(value: string) => handleChange('fullName', value)}
+              placeholder="First Name "
+              // value={credentials.fullName}
+              firstLogo={true}
+              img={imageIndex.Textprofile}
+            />
+             </View>
+              <View style={{
+                  margin:5
+                }}>
+               <TextInputField
+              // onChangeText={(value: string) => handleChange('fullName', value)}
+              placeholder="Last Name"
               value={credentials.fullName}
               firstLogo={true}
               img={imageIndex.Textprofile}
             />
+            </View>
+            </View>
             {errors.fullName && (
               <Text style={styles.errorText}>{errors.fullName}</Text>
             )}
@@ -121,6 +139,33 @@ export default function SignUp() {
           
           </View>
 
+           <TouchableOpacity
+      style={{
+        flexDirection:"row",
+        justifyContent:"space-between" ,
+        marginBottom:18
+      }}
+      onPress={() => setIsSelected(!isSelected)}
+      activeOpacity={0.8}
+    >
+      <Image
+        style={styles.icon}
+        source={
+          isSelected ?
+           imageIndex.checked // filled checkbox
+            :           imageIndex.checked 
+ 
+         }
+      />
+
+      <Text style={styles.text}>
+        I agree to the{" "}
+        <Text style={styles.link}>Barber Terms of Service</Text> and{" "}
+        <Text style={styles.link}>Privacy Policy</Text>
+      </Text>
+    </TouchableOpacity>
+
+
           {/* Sign Up Button */}
           <CustomButton
             title="Sign up"
@@ -164,7 +209,8 @@ export default function SignUp() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff', 
+
   },
   scrollContent: {
     flexGrow: 1,
@@ -173,7 +219,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     padding: 15,
     flex: 1,
-    marginTop: hp(5),
+    marginTop: hp(1.1),
   },
   header: {
      justifyContent: 'center',
@@ -186,9 +232,25 @@ const styles = StyleSheet.create({
   titleContainer: {
     marginTop: 5,
    },
+     icon: {
+    width: 22,
+    height: 22,
+    marginRight: 10,
+  },
+  text: {
+    fontSize: 14,
+    color: "#505050",
+    flex: 1,
+    lineHeight: 20,
+  },
+  link: {
+    color: "black",
+    fontWeight: "600",
+  },
+
   title: {
     color: 'black',
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: '600',
   },
   formContainer: {

@@ -12,15 +12,12 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import LinearGradient from "react-native-linear-gradient";
+ import LinearGradient from "react-native-linear-gradient";
 import ScreenNameEnum from "../../../routes/screenName.enum";
-import { errorToast } from "../../../utils/customToast";
-import imageIndex from "../../../assets/imageIndex";
+ import imageIndex from "../../../assets/imageIndex";
 import font from "../../../theme/font";
 import StatusBarComponent from "../../../compoent/StatusBarCompoent";
-import CustomButton from "../../../compoent/CustomButton";
-
+ 
 // Types and Constants
 type RoleOption = {
   id: number;
@@ -38,7 +35,8 @@ const ROLE_OPTIONS: RoleOption[] = [
     type: "user", 
     label: "Sender", 
     image: imageIndex.marketplace,
-    description: "Send packages and track deliveries"
+    description: "Send packages and track deliveries" ,
+    
   },
   { 
     id: 2, 
@@ -105,31 +103,19 @@ const ChooseRole = () => {
   const { fadeAnim, scaleAnim, pulseAnim, triggerPulseAnimation } = useRoleSelectionAnimations();
 
   const handleRoleSelect = (role: RoleOption) => {
+         navigation.navigate(ScreenNameEnum.Login);
     setSelectedRole(role);
     triggerPulseAnimation();
   };
 
-  const handleContinue = async () => {
-     navigation.navigate(ScreenNameEnum.Login);
-    if (!selectedRole) {
-      errorToast("Please select your role before proceeding.");
-      return;
-    }
-
-    try {
-      await AsyncStorage.setItem("selectedRole", selectedRole.type);
-      navigation.navigate(ScreenNameEnum.Login);
-    } catch (error) {
-      console.error("Error saving role:", error);
-      errorToast("Failed to save selection. Please try again.");
-    }
-  };
+ 
 
   const RoleCard = ({ role, isSelected }: { role: RoleOption; isSelected: boolean }) => (
     <TouchableOpacity
       activeOpacity={0.8}
       style={styles.cardWrapper}
       onPress={() => handleRoleSelect(role)}
+      // onPress={() => handleRoleSelect(role)}
     >
       <Animated.View 
         style={[
@@ -151,10 +137,10 @@ const ChooseRole = () => {
           ]}
         >
           <View style={styles.cardContent}>
-            <View style={[
-              styles.iconContainer,
-              
-            ]}>
+             <Text style={[styles.label, { color: isSelected ? "#fff" : "#1A1A1A" }]}>
+              {role.label}
+            </Text>
+          
               <Image
                 source={role.image}
                 style={[
@@ -162,10 +148,8 @@ const ChooseRole = () => {
                  ]}
                 resizeMode="contain"
               />
-            </View>
-            <Text style={[styles.label, { color: isSelected ? "#fff" : "#1A1A1A" }]}>
-              {role.label}
-            </Text>
+      
+           
             
           </View>
           
@@ -214,13 +198,7 @@ const ChooseRole = () => {
       </ScrollView>
 
       {/* Footer Button */}
-      <View style={styles.footer}>
-        <CustomButton
-          title="Continue"
-          onPress={handleContinue}
-          disabled={!selectedRole}
-        />
-      </View>
+     
     </SafeAreaView>
   );
 };
@@ -235,8 +213,6 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    paddingVertical: 20,
-    paddingHorizontal: 24,
   },
   headerContainer: {
     alignItems: "center",
@@ -260,9 +236,11 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   optionsContainer: {
-    width: "100%",
+    width: "70%",
     alignItems: "center",
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
+        paddingVertical: 10, 
+  
   },
   cardWrapper: {
     width: "100%",
@@ -278,8 +256,8 @@ const styles = StyleSheet.create({
     borderColor: "white",
     elevation: 5, // shadow for Android
      backgroundColor: "white", // make sure content is visible 
-    margin:5
-   
+    margin:10 ,
+    
     },
   cardSelected: {
  
@@ -288,11 +266,11 @@ const styles = StyleSheet.create({
   cardContent: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 10,
-  },
+     height:150 ,
+   },
   iconContainer: {
-    width: 70,
-    height: 70,
+    width: 80,
+    height: 80,
      alignItems: "center",
     justifyContent: "center",
    
@@ -302,14 +280,14 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255, 255, 255, 0.3)",
   },
   icon: {
-    height: 32,
-    width: 32,
+    height: 80,
+    width: 80,
   },
   label: {
-    fontSize: 15,
-     fontWeight: "600",
+    fontSize: 16,
+     fontWeight: "700",
     textAlign: "center",
-    marginBottom: 30,
+    marginBottom: 10,
 
   },
   description: {

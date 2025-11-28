@@ -53,7 +53,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       end={{ x: 0.83, y: 0 }}
       style={[
         styles.gradient,
-        { height: height, borderRadius: 9 },
+        { height: height, borderRadius:   9 },
         style,
       ]}
     >

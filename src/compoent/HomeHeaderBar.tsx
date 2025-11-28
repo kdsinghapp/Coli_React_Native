@@ -105,22 +105,19 @@ const HomeHeaderBar = ({
 
       <View style={styles.container}>
          
-          {/* <Image source={imageIndex.location1} style={styles.iconSmall} /> */}
-          <Text
+           <Text
             style={[styles.locationText, style1]}
             >
             {/* {location} */}
             Johan Smiths
           </Text>
-          {/* <Image source={imageIndex.arrowqdown} style={styles.iconSmall} /> */}
- 
+  
         <TouchableOpacity
           style={styles.notificationContainer}
           onPress={onNotificationPress}
         >
           <Image source={imageIndex.Notification} style={styles.iconLarge} />
-          {/* {hasNotification && <View style={styles.badge} />} */}
-        </TouchableOpacity>
+         </TouchableOpacity>
       </View>
     </View>
   );
@@ -146,8 +143,8 @@ const styles = StyleSheet.create({
      bottom:6
     },
   tex: {
-    color: "##EF571F",
-    fontSize: 12,
+    color: "#EF571F",
+    fontSize: 15,
      fontWeight:"800"
   },
   notificationContainer: {

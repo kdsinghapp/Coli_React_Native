@@ -99,11 +99,11 @@ const ShippingScreen = () => {
       />
                </View>
               <Text style={[styles.cardId,{
-                fontFamily:font.MonolithRegular ,
-                fontSize:14,
-                color:"black"
-              }]}>#5R9G87R</Text>
-               <Text style={styles.cardDate}>{item.date}</Text>
+                 fontSize:15,
+                color:"black" ,
+                fontWeight:"600"
+              }]}> {" "}#5R9G87R</Text>
+               <Text style={styles.cardDate}>{item.date ||". "}</Text>
            <Text style={styles.cardDate}>14 may 2023</Text>
 
             </View>
@@ -117,32 +117,36 @@ const ShippingScreen = () => {
                 <Image source={imageIndex.Vector} 
                 style={{
                     height:88,
-                    width:10
+                    width:11
                 }}
                 resizeMode="contain"
                 />
 
   <View style={{
                 flexDirection:"column",
-                right:11
+                left:3
              }}>
 <Text style={styles.label}>From</Text>
             <Text style={[styles.value,{
-                marginTop:5
+                marginTop:8
             }]}>1234 Elm Street Springfield, IL 62701</Text>
             <Text style={[styles.label,{
                 marginTop:10
             }]}>To</Text>
             <Text style={[styles.value,{
-                marginTop:5
+                marginTop:8
             }]}>{item.to || "5678 Maple Avenue Seattle, WA 98101"}</Text>
 
             {/* Status */}
             <View style={styles.statusRow}>
-              <Text style={styles.statusText}>Delivery Status :</Text>
-              <Text style={[styles.statusValue, { color: item.statusColor }]}>
-                {item.status}
-              </Text>
+              <Text style={styles.statusText}>Delivery Status : 
+                
+                  <Text style={[styles.statusValue, { color: "#29BE10" }]}>
+{" "}
+                    Delivered
+                  </Text>
+                </Text>
+             
             </View>
 </View>
             </View>
@@ -254,20 +258,20 @@ const styles = StyleSheet.create({
   cardDate: {
     fontSize: 14,
     color: "#BABFC5",
-    fontFamily:font.MonolithRegular
+    fontWeight:"600"
 
   },
   label: {
     fontSize: 14,
     color: "#BABFC5",
     marginTop: 6,
-    fontFamily:font.MonolithRegular
+    fontWeight:"600"
 
   },
   value: {
-    fontSize: 14,
+    fontSize: 15,
      color: "#76889A",
-     fontFamily:font.MonolithRegular
+    fontWeight:"500"
   },
   statusRow: {
     flexDirection: "row",
@@ -277,12 +281,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#76889A",
     marginRight: 6,
-    fontFamily:font.MonolithRegular
-  },
+    fontWeight:"500"
+   },
   statusValue: {
-    fontSize: 13,
+    fontSize: 15,
      color: "#555",
-    fontFamily:font.MonolithRegular
+    fontWeight:"600"
 
   },
 });

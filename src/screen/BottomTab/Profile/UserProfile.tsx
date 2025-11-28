@@ -169,7 +169,7 @@ const ProfileScreen: React.FC<Props> = ({
           />
           <ItemDivider />
           <ListItem
-            icon={<SvgIndex.Box  />}
+            icon={<SvgIndex.Adesh  />}
             label="My Orders"
             onPress={()=>{
               navigation.navigate(ScreenNameEnum.OrdersPrfile)
@@ -203,7 +203,7 @@ const ProfileScreen: React.FC<Props> = ({
   marginTop:20
 }}>
           <CustomButton
-            title={'Login'}
+            title={'Logout'}
             onPress={()=>{
             setModal(true)
           }}
