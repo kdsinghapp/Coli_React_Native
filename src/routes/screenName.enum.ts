@@ -5,6 +5,8 @@ enum ScreenNameEnum {
   Login = "Login",
   CreateNewPassword = "CreateNewPassword",
   HomeStack="HomeStack",
+  ChooseDeliveryScreen="ChooseDeliveryScreen",
+  PickupTypeScreen="PickupTypeScreen",
   ProfileScreen = "ProfileScreen",
   UploadDocumentsScreen="UploadDocumentsScreen",
   DeliveryHome="DeliveryHome",

@@ -61,8 +61,10 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
         <Image source={imageIndex.arrowqdown} 
         
         style={{
-          height:22,
-          width:22,
+          height:18,
+          width:18,
+          tintColor:"black" ,
+          resizeMode:"contain"
         }}
         />
       </TouchableOpacity>
@@ -129,7 +131,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 15,
     justifyContent: "space-between",
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: "#F7F8F8", 
     flexDirection:"row" ,
     alignItems:"center"

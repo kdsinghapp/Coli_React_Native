@@ -172,9 +172,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 0,  // better alignment with TextInput
     marginBottom: 8,
-    height: 59,
+    height: 50,
     justifyContent: "center",
-
+         elevation:8
+,
     // iOS shadow
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },

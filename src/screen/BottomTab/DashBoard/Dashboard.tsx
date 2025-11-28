@@ -46,7 +46,7 @@ const ShippingScreen = () => {
     />
 
       <TouchableOpacity style={styles.inputBox} 
-      onPress={()=> navigation.navigate(ScreenNameEnum.PickupLocation)}
+      // onPress={()=> navigation.navigate(ScreenNameEnum.PickupLocation)}
       >
         <Text style={{ color: "black" ,fontSize:14,fontWeight:"600", fontFamily:font.MonolithRegular}}>Enter Pickup Location</Text>
       <Image source={imageIndex.Next} 
@@ -192,6 +192,7 @@ const styles = StyleSheet.create({
      borderColor: "#eee",
     marginHorizontal: 2,
     marginTop:11,
+    elevation:7,
     // iOS shadow
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },

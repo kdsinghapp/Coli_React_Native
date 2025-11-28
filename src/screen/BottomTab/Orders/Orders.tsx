@@ -295,6 +295,8 @@ const styles = StyleSheet.create({
     marginTop: 11,
     shadowRadius: 1.41,
     borderColor: "#eee",
+         elevation:8
+
   },
   tab: {
     flex: 1,

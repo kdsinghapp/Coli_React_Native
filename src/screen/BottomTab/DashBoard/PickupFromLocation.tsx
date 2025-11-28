@@ -177,7 +177,7 @@ const PickupFromLocation = () => {
   };
    
 const handleSubmit = async () => {
-  // navgatoon.navigate(ScreenNameEnum.ReceiverRole)
+   navgatoon.navigate(ScreenNameEnum.ReceiverRole)
   // if (validateForm()) {
   //   console.log("Form submitted successfully!");
 
@@ -371,7 +371,7 @@ const handleSubmit = async () => {
         
         <CustomDropdown
           data={shipmentTypeData}
-          placeholder="Select"
+          placeholder="Select Type"
           onSelect={(value) => handleDropdownSelect("shipmentType", value)}
          />
         {errors.shipmentType ? <Text style={styles.errorText}>{errors.shipmentType}</Text> : null}
@@ -402,7 +402,7 @@ const handleSubmit = async () => {
           value={senderAddress}
           onChangeText={(value) => handleInputChange("senderAddress", value)}
           style={[styles.input, errors.senderAddress ? styles.inputError : null]} 
-          placeholder="Sender Address" 
+          placeholder="Enter Address" 
         />
         {errors.senderAddress ? <Text style={styles.errorText}>{errors.senderAddress}</Text> : null}
 
@@ -464,7 +464,7 @@ const handleSubmit = async () => {
 
         <CustomDropdown
           data={consignmentTypeData}
-          placeholder="Consignment Type"
+          placeholder="Select Consignment Type"
           onSelect={(value) => handleDropdownSelect("consignmentType", value)}
          />
         {errors.consignmentType ? <Text style={styles.errorText}>{errors.consignmentType}</Text> : null}
@@ -472,7 +472,19 @@ const handleSubmit = async () => {
         {/* Package Size */}
         <Text style={styles.sectionTitle}>Package Size</Text>
         <View style={styles.packageRow}>
-          {["1 KG", "3KG-10KG", "10kG"].map((size) => (
+          {[{
+            kg:"1 KG",
+            img: imageIndex.box
+          }, 
+          {
+            kg: "3KG-10KG",
+            img: imageIndex.sizef,
+          }, 
+          {
+            kg: "10kG",
+            img: imageIndex.box3,
+          }, 
+             ].map((size:any) => (
             <TouchableOpacity
               key={size}
               style={[
@@ -481,25 +493,28 @@ const handleSubmit = async () => {
               ]}
               onPress={() => setPackageSize(size)}
             >
+              <Image 
+              style={{
+                height:20,
+                width:33 ,
+                resizeMode:"contain"
+              }} 
+              source={size.img}/>
               <Text
                 style={[
-                  styles.packageText,
+                  size.packageText,
                   packageSize === size && styles.selectedText,
                 ]}
               >
-                {size}{" "}
+                {size?.kg}{" "}
               </Text>
             </TouchableOpacity>
           ))}
         </View>
 
         {/* Delivery Type */}
-        <CustomDropdown
-          data={deliveryTypeData}
-          placeholder="Delivery Type"
-          onSelect={(value) => handleDropdownSelect("deliveryType", value)}
-         />
-        {errors.deliveryType ? <Text style={styles.errorText}>{errors.deliveryType}</Text> : null}
+       
+        <Text style={styles.sectionTitle}>Delivery Type</Text>
 
         <TextInput 
           placeholderTextColor={"#ADA4A5"}
@@ -510,7 +525,12 @@ const handleSubmit = async () => {
           keyboardType="numeric" 
         />
         {errors.price ? <Text style={styles.errorText}>{errors.price}</Text> : null}
-
+ <CustomDropdown
+          data={deliveryTypeData}
+          placeholder="Select Type"
+          onSelect={(value) => handleDropdownSelect("deliveryType", value)}
+         />
+        {errors.deliveryType ? <Text style={styles.errorText}>{errors.deliveryType}</Text> : null}
         {/* Receiver Details */}
         <Text style={styles.sectionTitle}>Receiver Details</Text>
         <TextInput 
@@ -518,13 +538,13 @@ const handleSubmit = async () => {
           placeholderTextColor={"#ADA4A5"}
           value={receiverName}
           onChangeText={(value) => handleInputChange("receiverName", value)}
-          placeholder="Receiver Name" 
+          placeholder="Enter Name" 
         />
         {errors.receiverName ? <Text style={styles.errorText}>{errors.receiverName}</Text> : null}
 
         <TextInput
           style={[styles.input, errors.receiverMobile ? styles.inputError : null]}
-          placeholder="Receiver Mobile Number"
+          placeholder="Enter Mobile Number"
           keyboardType="phone-pad"
           placeholderTextColor={"#ADA4A5"}
           value={receiverMobile}
@@ -535,7 +555,7 @@ const handleSubmit = async () => {
 
         <TextInput 
           style={[styles.input, errors.receiverAddress ? styles.inputError : null]} 
-          placeholder="Receiver Address" 
+          placeholder="Enter Address" 
           placeholderTextColor={"#ADA4A5"}
           value={receiverAddress}
           onChangeText={(value) => handleInputChange("receiverAddress", value)}
@@ -550,7 +570,7 @@ const handleSubmit = async () => {
           value={extraMessage}
           onChangeText={setExtraMessage}
         />
-        {image?.uri ? (
+        {/* {image?.uri ? (
           <TouchableOpacity  
 
 onPress={()=>{
@@ -601,7 +621,7 @@ style={{
             color: "#ADA4A5"
           }}>Add Parcel Image +</Text>
           </TouchableOpacity>
-        )}
+        )} */}
 
 
         {/* Submit Button */}
@@ -682,7 +702,7 @@ const styles = StyleSheet.create({
   },
   packageBox: {
     width: "30%",
-    paddingVertical: 40,
+    paddingVertical: 30,
     borderWidth: 1.5,
     borderRadius: 20,
     borderColor: "#EAEAEA",

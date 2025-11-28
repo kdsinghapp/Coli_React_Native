@@ -19,6 +19,7 @@ import CustomHeader from "../../../compoent/CustomHeader";
 import StatusBarComponent from "../../../compoent/StatusBarCompoent";
 import imageIndex from "../../../assets/imageIndex";
 import font from "../../../theme/font";
+import ScreenNameEnum from "../../../routes/screenName.enum";
 
 // Types
 type RoleOption = {
@@ -110,6 +111,7 @@ const ReceiverRole = () => {
   // Handle Continue button
   const handleContinue = () => {
     if (!selectedRole) return;
+    navigation.navigate(ScreenNameEnum.PickupTypeScreen)
     console.log("Selected Role:", selectedRole);
     // TODO: Navigate to next screen
   };
@@ -249,7 +251,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3.1,
       },
       android: {
-        elevation: 3, // Only works on Android
+        elevation: 8, // Only works on Android
       },
     }),
  

@@ -36,6 +36,8 @@ import SignUp from "../screen/auth/signUp/SignUp";
 import CreateNewPassword from "../screen/auth/login/createNewPassword/CreateNewPassword";
 import PasswordReset from "../screen/auth/passwordReset/PasswordReset";
 import ReceiverRole from "../screen/BottomTab/ReceiverRole/ReceiverRole";
+import PickupTypeScreen from "../screen/BottomTab/PickupTypeScreen/PickupTypeScreen";
+import ChooseDeliveryScreen from "../screen/BottomTab/ChooseDeliveryScreen/ChooseDeliveryScreen";
   const _routes: any = {
   REGISTRATION_ROUTE: [
     {
@@ -70,6 +72,17 @@ import ReceiverRole from "../screen/BottomTab/ReceiverRole/ReceiverRole";
     {
       name: ScreenNameEnum.ReceiverRole,
       Component: ReceiverRole,
+    },
+   
+    {
+      name: ScreenNameEnum.PickupTypeScreen,
+      Component: PickupTypeScreen,
+    },
+   
+   
+    {
+      name: ScreenNameEnum.ChooseDeliveryScreen,
+      Component: ChooseDeliveryScreen,
     },
    
     {
