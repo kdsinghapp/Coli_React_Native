@@ -3,6 +3,8 @@ import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react
 import _routes from '../routes/routes';
 import ScreenNameEnum from '../routes/screenName.enum';
 
+
+
 export type RegistrationStackParamList = {
   [ScreenNameEnum.SPLASH_SCREEN]: undefined;
   [ScreenNameEnum.OnboardingScreen]: undefined;
